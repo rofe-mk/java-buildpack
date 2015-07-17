@@ -15,5 +15,6 @@
 
 # JAVA_OPTS configuration
 ---
-from_environment: true
-# java_opts:
+from_environment: false
+java_opts: 
+-Djavax.net.ssl.trustStore:$JAVA_HOME/jre/lib/security/truststore -Djavax.net.ssl.keyStore:$JAVA_HOME/jre/lib/security/keystore
