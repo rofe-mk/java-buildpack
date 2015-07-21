@@ -57,9 +57,10 @@ module JavaBuildpack
           .add_system_property('java.io.tmpdir', '$TMPDIR')
           .add_system_property('javax.net.ssl.keyStore', '$JAVA_HOME/jre/lib/security/keystore')
           .add_system_property('javax.net.ssl.trustStore', '$JAVA_HOME/jre/lib/security/truststore')
-          .add_system_property('javax.net.ssl.keyStorePassword', 'K0cYI9TlOMKKevVeB7vq')
-          .add_system_property('javax.net.ssl.trustStorePassword', 'Qf29bKPeS62QeB6VrDeKz40k-kcs9-FpMzW14iELiVP7SzdXGYS_PjfCvqdJB08hM9rb6W7U_4ug_fq_fg9BafKAM_QyzGOg95wmfITVn57HqYqQmGSSgeZH7zBeSmNp')
           .add_option('-XX:OnOutOfMemoryError', killjava)
+//          .add_system_property('javax.net.ssl.keyStorePassword', 'K0cYI9TlOMKKevVeB7vq')
+//          .add_system_property('javax.net.ssl.trustStorePassword', 'Qf29bKPeS62QeB6VrDeKz40k-kcs9-FpMzW14iELiVP7SzdXGYS_PjfCvqdJB08hM9rb6W7U_4ug_fq_fg9BafKAM_QyzGOg95wmfITVn57HqYqQmGSSgeZH7zBeSmNp')
+
       end
 
       private
