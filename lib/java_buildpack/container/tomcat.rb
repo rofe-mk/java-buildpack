@@ -36,8 +36,8 @@ module JavaBuildpack
       # (see JavaBuildpack::Component::ModularComponent#command)
       def command
         @droplet.java_opts.add_system_property 'http.port', '$PORT'
-        @droplet.java_opts.add_system_property 'javax.net.ssl.keyStore', 'keystore'
-        @droplet.java_opts.add_system_property 'javax.net.ssl.trustStore', "truststore"
+        @droplet.java_opts.add_system_property 'javax.net.ssl.keyStore', 'jre/lib/security/keystore'
+        @droplet.java_opts.add_system_property 'javax.net.ssl.trustStore', "jre/lib/security/truststore"
 
         [
           @droplet.java_home.as_env_var,
