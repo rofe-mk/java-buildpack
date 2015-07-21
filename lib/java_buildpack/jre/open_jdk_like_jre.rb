@@ -55,6 +55,8 @@ module JavaBuildpack
       def release
         @droplet.java_opts
           .add_system_property('java.io.tmpdir', '$TMPDIR')
+          .add_system_property('javax.net.ssl.keyStore', '$JAVA_HOME/jre/lib/security/keystore')
+          .add_system_property('javax.net.ssl.trustStore', '$JAVA_HOME/jre/lib/security/truststore')
           .add_option('-XX:OnOutOfMemoryError', killjava)
       end
 
